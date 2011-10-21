@@ -44,5 +44,6 @@ get_bundle jgdavey vim-blockle
 get_bundle msanders snipmate.vim
 get_bundle jboyens vim-protobuf
 get_bundle scrooloose nerdtree
+get_bundle ervandew supertab
 
 vim -c 'call pathogen#helptags()|q'
