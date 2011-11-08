@@ -1,5 +1,7 @@
 colorscheme ir_black
 set fuoptions=maxvert,maxhorz
+set guioptions=aAce
+set transparency=8
 nnoremap <MiddleMouse> <Nop>
 nnoremap <2-MiddleMouse> <Nop>
 nnoremap <3-MiddleMouse> <Nop>

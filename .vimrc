@@ -12,6 +12,7 @@ set smarttab
 set shiftwidth=2
 set autoindent
 set expandtab
+set hlsearch
 
 augroup vimrc
   autocmd!
