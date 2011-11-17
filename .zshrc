@@ -77,28 +77,8 @@ export PSQL_EDITOR='vim -c"set syntax=sql"'
 # just say no to zle vim mode:
 bindkey -e
 
-# aliases
-# alias mv='nocorrect mv'       # no spelling correction on mv
-# alias cp='nocorrect cp'
-# alias mkdir='nocorrect mkdir'
-# alias spec='nocorrect spec'
-# alias rspec='nocorrect rspec'
-# alias ll="ls -l"
-# alias la="ls -a"
-# alias l.='ls -ld .[^.]*'
-# alias lsd='ls -ld *(-/DN)'
-# alias md='mkdir -p'
-# alias rd='rmdir'
-# alias cd..='cd ..'
-# alias ..='cd ..'
-# alias spec='spec -c'
-# alias heroku='nocorrect heroku'
-
 # set cd autocompletion to commonly visited directories
-cdpath=(~ ~/src $DEV_DIR $HASHROCKET_DIR)
-
-# rvm-install added line:
-if [[ -s "$HOME/.rvm/scripts/rvm" ]] ; then source "$HOME/.rvm/scripts/rvm" ; fi
+cdpath=(~ ~/src $DEV_DIR)
 
 cuke() {
   local file="$1"
@@ -110,3 +90,7 @@ compctl -g '*.feature' -W features cuke
 # import local zsh customizations, if present
 zrcl="$HOME/.zshrc.local"
 [[ ! -a $zrcl ]] || source $zrcl
+#
+# rvm-install added line:
+if [[ -s "$HOME/.rvm/scripts/rvm" ]] ; then source "$HOME/.rvm/scripts/rvm" ; fi
+

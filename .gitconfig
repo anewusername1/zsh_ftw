@@ -1,48 +1,48 @@
 [alias]
-	st = status
-	ci = commit
-	co = checkout
-	cp = cherry-pick
-	put = push origin HEAD
-	fixup = !sh -c 'git commit -m \"fixup! $(git log -1 --format='\\''%s'\\'' $@)\"' -
-	squash = !sh -c 'git commit -m \"squash! $(git log -1 --format='\\''%s'\\'' $@)\"' -
-	ri = rebase --interactive
-	po = push origin
+  st = status
+  ci = commit
+  co = checkout
+  cp = cherry-pick
+  put = push origin HEAD
+  fixup = !sh -c 'git commit -m \"fixup! $(git log -1 --format='\\''%s'\\'' $@)\"' -
+  squash = !sh -c 'git commit -m \"squash! $(git log -1 --format='\\''%s'\\'' $@)\"' -
+  ri = rebase --interactive
+  po = push origin
 #[branch]
-#	autosetuprebase = always
+# autosetuprebase = always
 [color]
-	ui = auto
+  ui = auto
 [core]
-	excludesfile = /Users/tracey/.gitignore
-	editor = vim
-	whitespace = warn
+  excludesfile = /Users/tracey/.gitignore
+  editor = mvim
+  whitespace = warn
 [help]
-	autocorrect = 10
+  autocorrect = 10
 [merge]
-	summary = true
+  summary = true
 [merge "gemfilelock"]
-	name = relocks the gemfile.lock
-	driver = bundle lock
+  name = relocks the gemfile.lock
+  driver = bundle lock
 [merge "bundlelock"]
-	name = lock Gemfile
-	driver = bundle install
+  name = lock Gemfile
+  driver = bundle install
 [merge "bundle"]
-	name = bundle
-	driver = bundle
+  name = bundle
+  driver = bundle
 [merge "railsschema"]
-	name = newer Rails schema version
-	driver = "ruby -e '\n\
-		system %(git), %(merge-file), %(--marker-size=%L), %(%A), %(%O), %(%B)\n\
-		b = File.read(%(%A))\n\
-		b.sub!(/^<+ .*\\nActiveRecord::Schema\\.define.:version => (\\d+). do\\n=+\\nActiveRecord::Schema\\.define.:version => (\\d+). do\\n>+ .*/) do\n\
-		  %(ActiveRecord::Schema.define(:version => #{[$1, $2].max}) do)\n\
-		end\n\
-		File.open(%(%A), %(w)) {|f| f.write(b)}\n\
-		exit 1 if b.include?(%(<)*%L)'"
+  name = newer Rails schema version
+  driver = "ruby -e '\n\
+    system %(git), %(merge-file), %(--marker-size=%L), %(%A), %(%O), %(%B)\n\
+    b = File.read(%(%A))\n\
+    b.sub!(/^<+ .*\\nActiveRecord::Schema\\.define.:version => (\\d+). do\\n=+\\nActiveRecord::Schema\\.define.:version => (\\d+). do\\n>+ .*/) do\n\
+      %(ActiveRecord::Schema.define(:version => #{[$1, $2].max}) do)\n\
+    end\n\
+    File.open(%(%A), %(w)) {|f| f.write(b)}\n\
+    exit 1 if b.include?(%(<)*%L)'"
 [push]
-	default = tracking
+  default = tracking
 [rebase]
-	autosquash = true
+  autosquash = true
 [user]
-	email = traceyeubanks@yahoo.com
-	name = Tracey Eubanks
+  email = traceyeubanks@yahoo.com
+  name = Tracey Eubanks

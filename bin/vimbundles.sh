@@ -22,7 +22,9 @@ get_bundle pangloss vim-javascript
 get_bundle scrooloose nerdcommenter
 get_bundle therubymug vim-pyte
 get_bundle tpope vim-abolish
+get_bundle tpope vim-bundler
 get_bundle tpope vim-cucumber
+get_bundle tpope vim-commentary
 get_bundle tpope vim-endwise
 get_bundle tpope vim-fugitive
 get_bundle tpope vim-git
@@ -40,10 +42,13 @@ get_bundle tpope vim-vividchalk
 get_bundle vim-ruby vim-ruby
 get_bundle wgibbs vim-irblack
 get_bundle vim-scripts bufkill.vim
+get_bundle vim-bufexplorer.zip
 get_bundle jgdavey vim-blockle
+get_bundle jgdavey tslime.vim
 get_bundle msanders snipmate.vim
 get_bundle jboyens vim-protobuf
 get_bundle scrooloose nerdtree
 get_bundle ervandew supertab
+get_bundle gregsexton gitv
 
 vim -c 'call pathogen#helptags()|q'

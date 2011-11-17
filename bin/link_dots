@@ -47,7 +47,7 @@ if ARGV.include?('-h')
   "#{script}" symlinks the files in dotmatrix into your home directory.
   options:
       -h  Get this help
-      -u  Remove symlinks to files in dotmatrix
+      -u  Remove symlinks to files in .matrix
   ]
   exit 0
 end
