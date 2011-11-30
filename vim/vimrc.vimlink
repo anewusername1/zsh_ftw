@@ -1,0 +1,61 @@
+call pathogen#infect('~/.vimbundles')
+call pathogen#infect('~/.zsh_ftw/vim')
+
+syntax on
+filetype plugin indent on
+
+set nocompatible
+set autoindent
+set autoread
+set backspace=indent,eol,start
+set complete-=i      " Searching includes can be slow
+set display=lastline " When lines are cropped at the screen bottom, show as much as possible
+if &grepprg ==# 'grep -n $* /dev/null'
+  set grepprg=grep\ -rnH\ --exclude='.*.swp'\ --exclude='*~'\ --exclude='*.log'\ --exclude=tags\ $*\ /dev/null
+endif
+set incsearch
+set laststatus=2    " Always show status line
+if &listchars ==# 'eol:$'
+  set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
+endif
+set list            " show trailing whiteshace and tabs
+set modelines=5
+set scrolloff=1
+set sidescrolloff=5
+set showcmd
+set showmatch
+if &statusline == ''
+  set statusline=[%n]\ %<%.99f\ %h%w%m%r%{HTry('CapsLockStatusline')}%y%{HTry('rails#statusline')}%{HTry('fugitive#statusline')}%#ErrorMsg#%{HTry('SyntasticStatuslineFlag')}%*%=%-14.(%l,%c%V%)\ %P
+endif
+set ttimeoutlen=50  " Make Esc work faster
+set wildmenu
+
+if $TERM == '^\%(screen\|xterm-color\)$' && t_Co == 8
+  set t_Co=16
+endif
+
+
+set visualbell
+set tabstop=2
+set smarttab
+set shiftwidth=2
+set expandtab
+set nobackup
+set nowritebackup
+set noswapfile
+
+augroup vimrc
+  autocmd!
+  autocmd GuiEnter * set guifont=Monaco:h12 guioptions-=T columns=120 lines=70 number
+augroup END
+
+map <S-Enter> O<Esc>
+map <CR> o<Esc>
+
+nmap n nzz
+nmap N Nzz
+
+" source .vimrc.local so we can override whatever we want there
+if filereadable(expand('~/.vimrc.local'))
+  source ~/.vimrc.local
+endif

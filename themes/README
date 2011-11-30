@@ -1,0 +1,2 @@
+Add whatever themes you want in here then make sure to set your $ZSH_THEME variable to the base name (minus the extension) of the theme you've created.
+Make sure you have the right extension though, .zsh-theme

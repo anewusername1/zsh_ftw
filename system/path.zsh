@@ -1,0 +1,20 @@
+path=(
+  "$HOME/bin"
+  /usr/local/bin
+  /usr/local/sbin
+  /opt/local/bin
+  /usr/bin
+  /bin
+  /usr/sbin
+  /sbin
+  /usr/X11/bin
+  $ZSH/bin
+  /usr/local/lib/node_modules
+)
+
+manpath=(
+  /usr/local/man
+  /usr/local/git/man
+  /usr/share/man
+  /usr/local/share/man
+)

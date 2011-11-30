@@ -1,0 +1,3 @@
+Place runtimes you want available here
+
+This folder is added to your PATH env variable so you can access these binaries from wherever
