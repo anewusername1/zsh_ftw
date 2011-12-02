@@ -4,4 +4,16 @@
 # with options to (r)eplace, r(e)view, (o)verwrite, (i)gnore
 ack "empty\?.should be_true"
 ack "empty\?.should be_false"
+ack "should == "
+ack "should_not == "
+ack "should != "
 
+# TODO: check for the use of instance variables and warn against it, explaining
+# why the use of 'let' helpers is a better way
+
+# TODO: check for expect { ..... }.should
+# We should be using }.to instead
+
+# TODO: look for things like .count.should
+
+# TODO: look for "is_a?(Object).should be_true"
