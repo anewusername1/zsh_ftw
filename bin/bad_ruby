@@ -1,0 +1,1 @@
+# TODO: Check if instance variables are being used rather than attr_reader methods
