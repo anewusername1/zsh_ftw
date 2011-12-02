@@ -124,6 +124,10 @@ cnoremap          <C-F> <Right>
 noremap           <F1>   <Esc>
 noremap!          <F1>   <Esc>
 
+" NERDTree stuff
+noremap <Leader>tr :NERDTree<return>
+inoremap <Leader>tr :NERDTree<return>
+
 " Enable TAB indent and SHIFT-TAB unindent
 vnoremap <silent> <TAB> >gv
 vnoremap <silent> <S-TAB> <gv
@@ -152,7 +156,6 @@ if !exists('g:syntax_on')
   syntax on
 endif
 filetype plugin indent on
-
 
 augroup moneydesktop
   autocmd!
@@ -192,3 +195,4 @@ augroup moneydesktop
   autocmd User Rails Rnavcommand worker app/workers -suffix=_worker.rb -default=model()
   autocmd User Fugitive command! -bang -bar -buffer -nargs=* Gpr :Git<bang> pull --rebase <args>
 augroup END
+
