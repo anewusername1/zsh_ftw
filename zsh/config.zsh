@@ -14,9 +14,6 @@ HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
 
-CLICOLOR=1
-LSCOLORS="Dxfxcxdxbxegedabadacad"
-ZLS_COLORS=$LSCOLORS
 LC_CTYPE=en_US.UTF-8
 LESS=FRX
 setopt NO_BG_NICE # don't nice background tasks
