@@ -10,16 +10,12 @@ else
   PS1='%3~$(git_prompt_info)%# '
 fi
 
-LSCOLORS="exfxcxdxbxegedabagacad"
-CLICOLOR=true
-
-
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
 
-# export CLICOLOR=1
-# export LSCOLORS=Dxfxcxdxbxegedabadacad
+CLICOLOR=1
+LSCOLORS="Dxfxcxdxbxegedabadacad"
 ZLS_COLORS=$LSCOLORS
 LC_CTYPE=en_US.UTF-8
 LESS=FRX
