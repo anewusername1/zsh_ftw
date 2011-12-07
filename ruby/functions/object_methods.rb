@@ -24,5 +24,13 @@ class Object
     end
     puts `ri '#{method}'`
   end
+
+  def to_clipboard
+    `echo "#{self.inspect.gsub("\"", "'")}" |pbcopy`
+  end
+
+  def from_clipboard
+    eval(`pbpaste`.chomp)
+  end
 end
 
