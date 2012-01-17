@@ -1,5 +1,6 @@
 require 'rake'
 
+# TODO: change system calls (with `) to File.[method] calls
 def move_files(file_extension = '.symlink')
   linkables = Dir.glob("*/**{#{file_extension}}")
 
