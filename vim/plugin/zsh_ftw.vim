@@ -1,7 +1,7 @@
 " zsh_ftw.vim
 " vim:set ft=vim et tw=78 sw=2:
 
-if $ZSH == '' && expand('<sfile>') =~# '/.zsh_ftw/vim/plugin/moneydesktop\.vim$'
+if $ZSH == '' && expand('<sfile>') =~# '/.zsh_ftw/vim/plugin/zsh_ftw\.vim$'
   let $ZSH = expand('<sfile>')[0 : -38]
 endif
 if $ZSH == '' && filereadable(expand('~/.bashrc'))
@@ -157,7 +157,7 @@ if !exists('g:syntax_on')
 endif
 filetype plugin indent on
 
-augroup moneydesktop
+augroup zsh_ftw
   autocmd!
 
   autocmd CursorHold,BufWritePost,BufReadPost,BufLeave *
