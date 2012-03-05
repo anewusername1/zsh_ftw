@@ -31,7 +31,7 @@ Hcommand tabedit
 command! -bar -nargs=* -complete=dir Terrarails :execute 'Rails --template='.system("ruby -rubygems -e 'print Gem.bin_path(%(terraformation))'") . ' ' . <q-args>
 
 command! -bar -range=% Trim :<line1>,<line2>s/\s\+$//e
-command! -bar -range=% NotRocket :<line1>,<line2>s/:\(\w\+\)\s*=>/\1:/ge
+command! -bar -range=% NotRocket :<line1>,<line2>s/:\(\w\+\)\s*=>\|'\(\w\+\)'\s*=>/\1\2:/ge
 
 command! -bar -nargs=* -bang -complete=file Rename :
       \ let v:errmsg = ""|
@@ -75,27 +75,6 @@ let g:surround_indent = 1
 if !exists('g:w_sleep')
   let g:w_sleep = 0
 endif
-
-function! s:Wall() abort
-  let sleep = g:w_sleep ? 'sleep '.g:w_sleep.'m' : ''
-  let tab = tabpagenr()
-  let win = winnr()
-  let seen = {}
-  if !&readonly && expand('%') !=# ''
-    let seen[bufnr('')] = 1
-    write
-  endif
-  tabdo windo if !&readonly && expand('%') !=# '' && !has_key(seen, bufnr('')) | exe sleep | silent write | let seen[bufnr('')] = 1 | endif
-  execute 'tabnext '.tab
-  execute win.'wincmd w'
-endfunction
-
-command! -bar W              :call s:Wall()
-
-command! -bar -nargs=0 SudoW :setl nomod|silent exe 'write !sudo tee % >/dev/null'|let &mod = v:shell_error
-
-runtime! plugin/matchit.vim
-runtime! macros/matchit.vim
 
 map Y       y$
 nnoremap <silent> <C-L> :nohls<CR><C-L>
