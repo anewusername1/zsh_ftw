@@ -14,26 +14,25 @@ get_bundle() {
   )
 }
 
-get_bundle adamlowe vim-slurper
-get_bundle duff vim-bufonly
-get_bundle godlygeek tabular
-get_bundle leshill vim-json
-get_bundle mileszs ack.vim
-get_bundle pangloss vim-javascript
-get_bundle scrooloose nerdcommenter
-get_bundle therubymug vim-pyte
-get_bundle tpope vim-abolish
-get_bundle tpope vim-cucumber
-get_bundle tpope vim-endwise
-get_bundle tpope vim-fugitive
-get_bundle tpope vim-git
-get_bundle tpope vim-haml
-get_bundle tpope vim-markdown
-get_bundle tpope vim-pathogen
-get_bundle tpope vim-rake
-get_bundle tpope vim-ragtag
-get_bundle tpope vim-rails
-get_bundle tpope vim-repeat
+# get_bundle adamlowe vim-slurper # send stories to pivotal
+get_bundle duff vim-bufonly # close all buffers but current one/supplied one
+get_bundle godlygeek tabular # tabularize data based on supplied dilimiter (Tab /=)
+get_bundle leshill vim-json # syntax and highlighting for json text
+get_bundle mileszs ack.vim # run ack from vim
+get_bundle pangloss vim-javascript # syntax and highlighting for javascript
+get_bundle scrooloose nerdcommenter # easier commenting
+get_bundle tpope vim-abolish # work with text abbreviations, substitution, and coercion
+get_bundle tpope vim-bundle # vim wrapper for some bundle commands
+get_bundle tpope vim-endwise # intelligently add endings to common ruby blocks/methods/classes/etc
+get_bundle tpope vim-fugitive # git wrapper
+get_bundle tpope vim-git # useful git syntax highlighting and text wrapping (for commits, etc)
+get_bundle tpope vim-haml # syntax and highlighting for haml
+get_bundle tpope vim-markdown # syntax and highlighting for markdown
+get_bundle tpope vim-pathogen # move all plugins to a central location and let pathogen load them
+get_bundle tpope vim-rake # wrapper for some rake commands
+get_bundle tpope vim-ragtag # xml/html mappings
+get_bundle tpope vim-rails # common wrappings for rails
+get_bundle tpope vim-repeat # wrapts . operator in a way other plugins can use it
 get_bundle tpope vim-speeddating
 get_bundle tpope vim-surround
 get_bundle tpope vim-unimpaired
@@ -44,9 +43,11 @@ get_bundle vim-scripts bufkill.vim
 get_bundle jgdavey vim-blockle
 get_bundle msanders snipmate.vim
 get_bundle scrooloose nerdtree
+get_bundle scrooloose syntastic
 get_bundle ervandew supertab
 get_bundle vim-scripts vimwiki
 get_bundle garyharan vim-proto
+get_bundle majutsushi tagbar # add a tagbar to the left hand side to easily cycle through tags
 cd ~/.vim
 if [ ! -d "autoload" ]; then
   mkdir "autoload"
