@@ -46,7 +46,7 @@ class InteractiveEditor
     raise "command `#{@editor.split.first}` not found" if(system("which '#{@editor.split.first}'") == false)
     system("#{@editor} #{@file.path}") unless(rerun == true)
     lines = File.read(@file.path).gsub("\r", "\n")
-    lines.split("\n").each { |l| Readline::HISTORY << l } # update history
+    lines.split("\n").each { |l| Readline::HISTORY << l } unless(rerun == true) # update history
     puts 'Running the following:', '--------------'
     puts lines, '--------------', ''
     Object.class_eval(lines)
