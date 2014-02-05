@@ -48,6 +48,7 @@ get_bundle ervandew supertab
 get_bundle vim-scripts vimwiki
 get_bundle garyharan vim-proto
 get_bundle majutsushi tagbar # add a tagbar to the left hand side to easily cycle through tags
+get_bundle kien ctrlp.vim # fuzzy finder
 cd ~/.vim
 if [ ! -d "autoload" ]; then
   mkdir "autoload"
