@@ -11,11 +11,11 @@ class Object
     (methods - Object.instance_methods).sort
   end
 
-  def request(options = {})
-    url=app.url_for(options)
-    app.get(url)
-    puts app.html_document.root.to_s
-  end
+  #def request(options = {})
+  #  url=app.url_for(options)
+  #  app.get(url)
+  #  puts app.html_document.root.to_s
+  #end
 
   def ri(method = nil)
     unless method && method =~ /^[A-Z]/ # if class isn't specified

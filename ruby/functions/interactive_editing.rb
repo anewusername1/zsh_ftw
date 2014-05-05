@@ -62,7 +62,15 @@ module InteractiveEditing
       IRB.conf[:interactive_editors] ||= {}
       IRB.conf[:interactive_editors][editor] = InteractiveEditor.new(editor)
     end
-    IRB.conf[:interactive_editors][editor].edit_interactively(rerun, '/Users/tracey/temp/irb')
+    possible_home_env_var = ["HOME", "HOMEPATH"]
+
+    home_path = possible_home_env_var.detect {|h| ENV[h] != nil}
+
+    if home_path.nil?
+         puts "Could not find home directory"
+    end
+    home_path = ENV[home_path]
+    IRB.conf[:interactive_editors][editor].edit_interactively(rerun, "#{home_path}/tmp/irb")
   end
 
   def rerun
