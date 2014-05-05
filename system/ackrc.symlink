@@ -1,4 +1,5 @@
 --type-set=xml=.xml
 --type-set=ruby=.rb
 --type-set=yml=.yml
+--ignore-dir=log
 --noxml
