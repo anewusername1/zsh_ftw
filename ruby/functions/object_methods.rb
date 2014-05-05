@@ -26,7 +26,7 @@ class Object
   end
 
   def to_clipboard
-    `echo "#{self.inspect.gsub("\"", "'")}" |pbcopy`
+    `echo '#{self.inspect.to_string}' |pbcopy`
   end
 
   def from_clipboard
