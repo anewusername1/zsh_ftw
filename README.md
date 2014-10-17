@@ -1,5 +1,5 @@
-The purpose of this repo is to make life easier for all the developers out there
-It very much assumes you're using zsh, rvm, and git. There are configurations for vim, but whether you want to use vim is completely up to you. Nothing will break if you don't.
+# ZSH For the Win
+Various functions and stylings to make life in the shell just a little more enjoyable
 
 ## install
 
@@ -48,5 +48,3 @@ Follow these conventions to get things you want in the right places
 - **topic/\*.completion.sh**: Any files ending in `completion.sh` get loaded
   last so that they get loaded after we set up zsh autocomplete functions.
 
-## contributors
-A special thanks to those that freely provided the functions and directory structures used in this project
