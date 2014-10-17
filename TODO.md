@@ -1,1 +1,0 @@
-  - Convert Rakefile to a shell script so we don't rely on the user having ruby
