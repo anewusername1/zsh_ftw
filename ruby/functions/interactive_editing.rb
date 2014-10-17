@@ -49,7 +49,7 @@ class InteractiveEditor
     lines.split("\n").each { |l| Readline::HISTORY << l } unless(rerun == true) # update history
     puts 'Running the following:', '--------------'
     puts lines, '--------------', ''
-    Object.class_eval(lines)
+    IRB.CurrentContext.workspace.binding.eval(lines)
     rescue Exception => error
       # puts @file.path
       puts error
