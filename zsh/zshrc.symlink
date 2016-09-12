@@ -19,6 +19,11 @@ then
   source ~/.localrc
 fi
 
+if [[ -a ~/.zshrc.local ]]
+then
+  source ~/.zshrc.local
+fi
+
 # initialize autocomplete here, otherwise functions won't be loaded
 autoload -U compinit
 compinit
