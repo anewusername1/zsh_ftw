@@ -26,7 +26,7 @@ class Object
   end
 
   def to_clipboard
-    `echo '#{self.inspect.to_s}' |pbcopy`
+    `echo #{self.inspect.to_s} |pbcopy`
   end
 
   def from_clipboard
