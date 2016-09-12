@@ -22,7 +22,7 @@ get_bundle mileszs ack.vim          # run ack from vim
 get_bundle pangloss vim-javascript  # syntax and highlighting for javascript
 get_bundle scrooloose nerdcommenter # easier commenting
 get_bundle tpope vim-abolish        # work with text abbreviations, substitution, and coercion
-get_bundle tpope vim-bundle         # vim wrapper for some bundle commands
+get_bundle tpope vim-bundler        # vim wrapper for some bundle commands
 get_bundle tpope vim-endwise        # intelligently add endings to common ruby blocks/methods/classes/etc
 get_bundle tpope vim-fugitive       # git wrapper
 get_bundle tpope vim-git            # useful git syntax highlighting and text wrapping (for commits, etc)
