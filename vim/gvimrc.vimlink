@@ -1,5 +1,6 @@
 colorscheme vividchalk
 set fuoptions=maxvert,maxhorz
+set spell
 nnoremap <MiddleMouse> <Nop>
 nnoremap <2-MiddleMouse> <Nop>
 nnoremap <3-MiddleMouse> <Nop>
