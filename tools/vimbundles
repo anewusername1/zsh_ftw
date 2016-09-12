@@ -30,7 +30,8 @@ get_bundle tpope vim-haml           # syntax and highlighting for haml
 get_bundle tpope vim-markdown       # syntax and highlighting for markdown
 get_bundle tpope vim-pathogen       # move all plugins to a central location and let pathogen load them
 get_bundle tpope vim-ragtag         # xml/html mappings
-get_bundle tpope vim-rails          # common wrappings for rails
+# Gives eventual errors
+# get_bundle tpope vim-rails          # common wrappings for rails
 get_bundle tpope vim-repeat         # wrapts . operator in a way other plugins can use it
 get_bundle tpope vim-speeddating
 get_bundle tpope vim-surround
