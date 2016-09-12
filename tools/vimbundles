@@ -33,22 +33,19 @@ get_bundle tpope vim-ragtag         # xml/html mappings
 # Gives eventual errors
 # get_bundle tpope vim-rails          # common wrappings for rails
 get_bundle tpope vim-repeat         # wrapts . operator in a way other plugins can use it
-get_bundle tpope vim-speeddating
-get_bundle tpope vim-surround
-get_bundle tpope vim-unimpaired
-get_bundle tpope vim-vividchalk
-get_bundle vim-ruby vim-ruby
-get_bundle wgibbs vim-irblack
-get_bundle vim-scripts bufkill.vim
-get_bundle jgdavey vim-blockle
-get_bundle msanders snipmate.vim
-get_bundle scrooloose nerdtree
-get_bundle scrooloose syntastic
-get_bundle ervandew supertab
-get_bundle vim-scripts vimwiki
-get_bundle garyharan vim-proto
+get_bundle tpope vim-speeddating    # CTRL-a CTRL-x to increment/decrement dates and times
+get_bundle tpope vim-surround       # use cs'" to change single quotes to double
+get_bundle tpope vim-unimpaired     # [<Space> and ]<Space> add newlines before and after the cursor line. [e and ]e exchange the current line with the one above or below it.
+get_bundle tpope vim-vividchalk     # Color Scheme
+get_bundle vim-ruby vim-ruby        # Bunch of ruby stuff
+get_bundle vim-scripts bufkill.vim  # Kill buffers
+get_bundle scrooloose nerdtree      # file browser on the left side
+get_bundle scrooloose syntastic     # Add syntax checking to your vim windows
+get_bundle garyharan vim-proto      # Protobuf syntax highlighting
 get_bundle majutsushi tagbar        # add a tagbar to the left hand side to easily cycle through tags
 get_bundle kien ctrlp.vim           # fuzzy finder
+get_bundle fatih vim-go             # Tons of fluff related to GoLang development
+get_bundle vim-scripts dbext.vim    # SQL Autocompletion
 cd ~/.vim
 if [ ! -d "autoload" ]; then
   mkdir "autoload"
