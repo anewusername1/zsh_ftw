@@ -9,8 +9,12 @@ require 'bundler'
 begin
   Bundler.require :console
 rescue Bundler::GemfileNotFound
-  require 'wirble'
-  require 'hirb'
+  begin
+    require 'wirble'
+    require 'hirb'
+  rescue LoadError
+    puts "could not load wirble"
+  end
 end
 
 if defined?(Hirb)
