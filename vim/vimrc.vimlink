@@ -62,6 +62,11 @@ map <CR> o<Esc>
 nmap n nzz
 nmap N Nzz
 
+source ~/.zsh_ftw/vim/plugin/commandt.vim
+source ~/.zsh_ftw/vim/plugin/neocomplete.vim
+source ~/.zsh_ftw/vim/plugin/vim-go.vim
+source ~/.zsh_ftw/vim/plugin/tagbar.vim
+
 " source .vimrc.local so we can override whatever we want there
 if filereadable(expand('~/.vimrc.local'))
   source ~/.vimrc.local
