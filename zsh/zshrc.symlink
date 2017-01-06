@@ -33,3 +33,11 @@ for config_file ($ZSH/**/completion.sh) source $config_file
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 cdpath=($MOST_PROJECTS $GO_PROJECTS)
+
+# function chpwd() {
+#   if [ -r $PWD/.zsh_config ]; then
+#     source $PWD/.zsh_config
+#   else
+#     source $HOME/.zshrc
+#   fi
+# }
