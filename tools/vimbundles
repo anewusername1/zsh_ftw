@@ -45,6 +45,9 @@ get_bundle garyharan vim-proto      # Protobuf syntax highlighting
 get_bundle majutsushi tagbar        # add a tagbar to the left hand side to easily cycle through tags
 get_bundle fatih vim-go             # Tons of fluff related to GoLang development
 get_bundle vim-scripts dbext.vim    # SQL Autocompletion
+get_bundle shougo neocomplete       # All purpose autocompletion
+get_bundle vim-airline vim-airline  # snazzy status bar
+get_bundle wincent Command-T        # Fuzzy file matcher
 cd ~/.vim
 if [ ! -d "autoload" ]; then
   mkdir "autoload"
