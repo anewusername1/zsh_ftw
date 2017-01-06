@@ -62,9 +62,6 @@ let g:ruby_minlines = 500
 let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_rails = 1
 
-let g:NERDCreateDefaultMappings = 0
-let g:NERDSpaceDelims = 1
-let g:NERDShutUp = 1
 let g:VCSCommandDisableMappings = 1
 
 let g:surround_{char2nr('s')} = " \r"
@@ -102,10 +99,6 @@ cnoremap          <C-F> <Right>
 
 noremap           <F1>   <Esc>
 noremap!          <F1>   <Esc>
-
-" NERDTree stuff
-noremap <Leader>tr :NERDTree<return>
-inoremap <Leader>tr :NERDTree<return>
 
 " Enable TAB indent and SHIFT-TAB unindent
 vnoremap <silent> <TAB> >gv

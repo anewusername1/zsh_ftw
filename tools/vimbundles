@@ -39,7 +39,7 @@ get_bundle tpope vim-unimpaired     # [<Space> and ]<Space> add newlines before 
 get_bundle tpope vim-vividchalk     # Color Scheme
 get_bundle vim-ruby vim-ruby        # Bunch of ruby stuff
 get_bundle vim-scripts bufkill.vim  # Kill buffers
-get_bundle scrooloose nerdtree      # file browser on the left side
+# get_bundle scrooloose nerdtree      # file browser on the left side
 get_bundle scrooloose syntastic     # Add syntax checking to your vim windows
 get_bundle garyharan vim-proto      # Protobuf syntax highlighting
 get_bundle majutsushi tagbar        # add a tagbar to the left hand side to easily cycle through tags
