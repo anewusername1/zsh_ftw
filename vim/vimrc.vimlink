@@ -3,6 +3,8 @@ source ~/.zsh_ftw/vim/plugin/bundle_open.vim
 source ~/.zsh_ftw/vim/plugin/pretty_xml.vim
 source ~/.zsh_ftw/vim/plugin/pretty_json.vim
 source ~/.zsh_ftw/vim/plugin/set_tab_spaces.vim
+source ~/.zsh_ftw/vim/plugin/large_files.vim
+source ~/.zsh_ftw/vim/plugin/highlight_repeats.vim
 
 execute pathogen#infect('~/.vimbundles/{}')
 
