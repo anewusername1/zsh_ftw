@@ -7,7 +7,8 @@ export ZSH=$HOME/.zsh_ftw
 
 # your project folder that we can `c [tab]` to
 export MOST_PROJECTS=~/Development
-export GO_PROJECTS=~/Development/gocode/src/github.com/bypasslane
+export GO_PROJECTS=~/Development/gocode/src/github.com/outdoorsy
+export MY_PROJECTS=~/Development/gocode/src/github.com/teubanks
 
 # source every .zsh file in this rep
 for config_file ($ZSH/**/*.zsh) source $config_file
@@ -32,7 +33,7 @@ compinit
 for config_file ($ZSH/**/completion.sh) source $config_file
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-cdpath=($MOST_PROJECTS $GO_PROJECTS)
+cdpath=($MOST_PROJECTS $GO_PROJECTS $MY_PROJECTS)
 
 # function chpwd() {
 #   if [ -r $PWD/.zsh_config ]; then

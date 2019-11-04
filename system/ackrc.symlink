@@ -3,3 +3,4 @@
 --type-set=yml=.yml
 --ignore-dir=log
 --noxml
+--ignore-dir=vendor
