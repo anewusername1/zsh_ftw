@@ -42,3 +42,7 @@ cdpath=($MOST_PROJECTS $GO_PROJECTS $MY_PROJECTS)
 #     source $HOME/.zshrc
 #   fi
 # }
+
+
+# Added by serverless binary installer
+export PATH="$HOME/.serverless/bin:$PATH"
